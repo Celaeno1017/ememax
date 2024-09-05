@@ -1,0 +1,12 @@
+Package: ememax
+Type: Package
+Title: Bias Reduction Dose-Respose Estimation with Missing Binary Response for Emax Model
+Version: 0.1.0
+Author: Jiangshan Zhang
+Maintainer: Jiangshan Zhang <jiszhang@ucdavis.edu>
+Description: The functions EmaxEM and EmaxEM_firth fit an Emax model to binary data using maximum likelihood  and EM algorithm with missing data in response. EmaxEM do the EM directly, while EmaxEM_firth is bias reduced model with jeffrey prior peanlized likelihood function.
+License: MIT
+Encoding: UTF-8
+LazyData: true
+Imports: brglm2, numDeriv, maxLik, formula.tools, BB, clinDR, MASS, boot
+RoxygenNote: 7.3.2
