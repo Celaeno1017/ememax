@@ -50,7 +50,7 @@ fitEmaxEM <- function (data=NULL,theta_0=NULL,alpha_0=NULL, mis_form=as.formula(
   alpha_0 <- coef(fit_mis)
 
   mis_theta<-clinDR::fitEmax(y=data[which(data$mis==0),]$y,dose=data[which(data$mis==0),]$dose,modType=3,binary = TRUE,diagnostics=FALSE)
-  if(is.null(mis_theta)){theta_0 <-  startEmax(y=data$y,dose=data$dose,binary = TRUE)}
+  if(is.null(mis_theta)){theta_0 <-  clinDR::startEmax(y=data$y,dose=data$dose,binary = TRUE)}
   else{theta_0 = mis_theta$fit$estimate}
   # theta_0 <-startEmax(data$y,data$dose,binary = TRUE,count = weight)
 
@@ -165,7 +165,7 @@ fitEmaxEM_firth <- function (data=NULL,theta_0=NULL,alpha_0=NULL,mis_form=as.for
   alpha_0 <- coef(fit_mis)
 
   mis_theta<-clinDR::fitEmax(y=data[which(data$mis==0),]$y,dose=data[which(data$mis==0),]$dose,modType=3,binary = TRUE,diagnostics=FALSE)
-  if(is.null(mis_theta)){theta_0 <-  startEmax(y=data$y,dose=data$dose,binary = TRUE)}
+  if(is.null(mis_theta)){theta_0 <-  clinDR::startEmax(y=data$y,dose=data$dose,binary = TRUE)}
   else{theta_0 = mis_theta$fit$estimate}
   # theta_0 <-startEmax(data$y,data$dose,binary = TRUE,count = weight)
 
@@ -236,3 +236,4 @@ fitEmaxEM_firth <- function (data=NULL,theta_0=NULL,alpha_0=NULL,mis_form=as.for
 
   return(res)
 }
+
