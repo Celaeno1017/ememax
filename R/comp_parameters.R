@@ -338,7 +338,7 @@ comp_Q_firth <- function(data,theta,alpha,weight,fit_mis){
   Hess <- Comp_Hess(data,theta,weight)
   #I <- Comp_I(data,weight,theta)
   # logdetI <- ifelse(is.na(log(det(-Hess))),log(det(I)),log(det(-Hess)))
-  logdetI <- ifelse(is.na(log(det(-Hess))),0,log(det(-Hess)))
+  logdetI <- ifelse(is.na(log(det(-Hess))),10^(-16),log(det(-Hess)))
   if(is.na(log(det(-Hess)))){message('det less than 0!')}
   # x <- cbind(rep(1,length(data$y)),as.matrix(cbind(data$y,data$dose,data$x1,data$x2)))
   # alpha <- as.matrix(alpha)
@@ -350,6 +350,7 @@ comp_Q_firth <- function(data,theta,alpha,weight,fit_mis){
   Q = sum(weight*(log_Emax))+logdetI/2+Q_mis
   return(Q)
 }
+
 
 
 
