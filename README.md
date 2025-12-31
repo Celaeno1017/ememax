@@ -4,10 +4,10 @@ In this document, we illustrate the main features of the `ememax` R package thro
 
 ## Cite the package
 
-The package applies methods introduced in the [paper](https://arxiv.org/abs/2410.00259):
+The package applies methods introduced in the [paper](https://doi.org/10.1177/09622802251403356):
 
-Zhang, J., Pradhan, V. and Zhao, Y., 2024. Robust Emax Model Fitting: Addressing Nonignorable Missing Binary Outcome in Dose-Response Analysis. arXiv preprint arXiv:2410.00259.
-
+Zhang J, Pradhan V, Zhao Y. Robust Emax model fitting: Addressing nonignorable missing binary outcome in dose–response analysis. Statistical Methods in Medical Research. 2026;0(0). doi:10.1177/09622802251403356
+  
 ## Install
 
 Open the R console and run the following command to install the package from source:
